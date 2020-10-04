@@ -20,7 +20,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "assets/2.png",
+              "C:\\Users\\Uday Vig\\Desktop\\fe\\clearing-settlement\\src\\assets\\2.png",
               "src/assets"
             ],
             "styles": [

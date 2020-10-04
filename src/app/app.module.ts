@@ -33,6 +33,7 @@ import { CmOverviewComponent } from './cm-overview/cm-overview.component'
 import {TradeAddComponent} from './trade-add/trade-add.component'
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { HighchartsChartComponent, HighchartsChartModule } from 'highcharts-angular';
 
 @NgModule({
   declarations: [
@@ -71,8 +72,8 @@ import {MatSelectModule} from '@angular/material/select';
     HttpClientModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatSelectModule
-    
+    MatSelectModule,
+    HighchartsChartModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

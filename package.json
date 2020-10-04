@@ -29,6 +29,8 @@
     "@uirouter/rx": "0.6.5",
     "@uirouter/visualizer": "^7.2.1",
     "core-js": "^2.5.7",
+    "highcharts": "^8.2.0",
+    "highcharts-angular": "^2.8.0",
     "ngx-cookie-service": "^10.1.1",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
