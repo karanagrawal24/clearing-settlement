@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TradeAddService} from './trade-add.service'
 import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 // import {MatFieldModule} from '@angular/material/form-field'
 
@@ -56,15 +58,16 @@ export class TradeAddComponent {
    {value: '4', viewValue: 'Morgan Stanley'},
  ];
 
- constructor(private _httpService: TradeAddService) { }
+ constructor(private router: Router, private _httpService: TradeAddService) { }
 
  postTradeData = new TradeData("gs","apple","Apple",5,100,); 
 
- onSubmit(): void {
+ onSubmit(add: NgForm): void {
   //  console.log(this.postTradeData)
     this._httpService.postTrade(this.postTradeData).subscribe(
-      data => console.log("success!", data),
+      data => alert("Trade added successfully"),
       error => console.error("Error",error)
     );  
+    add.reset();
  }
 }

@@ -1,27 +1,27 @@
 <div class="flex-container">
   <mat-card>
     <!-- <mat-card-title>Trade Volume</mat-card-title> -->
-    <mat-table [dataSource]="getTradeVolume" class="mat-elevation-z8">
+    <table mat-table [dataSource]="getTradeVolume" class="mat-elevation-z8">
     <ng-container matColumnDef="TradeVolume">
-      <mat-header-cell *matHeaderCellDef> Trade Volume </mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.TradeVolume }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Trade Volume </th>
+      <td mat-cell *matCellDef="let element"> {{element.TradeVolume | number}} </td>
     </ng-container>
-    <mat-header-row *matHeaderRowDef="displayedColumnTradeVolumeCard"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumnTradeVolumeCard;"></mat-row>
-    </mat-table></mat-card> 
+    <tr mat-header-row *matHeaderRowDef="displayedColumnTradeVolumeCard"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnTradeVolumeCard;"></tr>
+    </table></mat-card> 
   <mat-card>
   <mat-card-content><h1>{{today |date:'medium'}} </h1></mat-card-content>
   </mat-card> 
   <mat-card>
     <!-- <mat-card-title>Cash Borrowing Interest Rate</mat-card-title> -->
-    <mat-table [dataSource]="getCashRate" class="mat-elevation-z8">
+    <table mat-table [dataSource]="getCashRate" class="mat-elevation-z8">
     <ng-container matColumnDef="interest_rate">
-      <mat-header-cell *matHeaderCellDef> Fund Interest Rate</mat-header-cell>
-      <mat-cell *matCellDef="let element"> {{element.interest_rate*100 }} </mat-cell>
+      <th mat-header-cell *matHeaderCellDef> Fund Interest Rate</th>
+      <td mat-cell *matCellDef="let element"> {{element.interest_rate*100 | number}}%</td>
     </ng-container>
-    <mat-header-row *matHeaderRowDef="displayedColumnCashInterestCard"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumnCashInterestCard;"></mat-row>
-    </mat-table>
+    <tr mat-header-row *matHeaderRowDef="displayedColumnCashInterestCard"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnCashInterestCard;"></tr>
+    </table>
   </mat-card>
 </div>
 <div class="flex-container">
@@ -37,33 +37,33 @@
 
     <!-- Weight Column -->
     <ng-container matColumnDef="cash">
-      <th mat-header-cell *matHeaderCellDef>Cash</th>
-      <td mat-cell *matCellDef="let element">{{element.cash }}</td>
+      <th mat-header-cell *matHeaderCellDef>Cash (in USD)</th>
+      <td mat-cell *matCellDef="let element">{{element.cash | number}}</td>
     </ng-container>
     <ng-container matColumnDef="apple">
       <th mat-header-cell *matHeaderCellDef>Apple</th>
-      <td mat-cell *matCellDef="let element">{{element.apple }}</td>
+      <td mat-cell *matCellDef="let element">{{element.apple | number}}</td>
     </ng-container>
 
     <!-- Symbol Column -->
     <ng-container matColumnDef="google">
       <th mat-header-cell *matHeaderCellDef>Google</th>
-      <td mat-cell *matCellDef="let element">{{element.google }}</td>
+      <td mat-cell *matCellDef="let element">{{element.google | number}}</td>
     </ng-container>
 
     <ng-container matColumnDef="facebook">
       <th mat-header-cell *matHeaderCellDef> Facebook </th>
-      <td mat-cell *matCellDef="let element"> {{element.facebook }} </td>
+      <td mat-cell *matCellDef="let element"> {{element.facebook | number}} </td>
     </ng-container>
 
     <ng-container matColumnDef="amazon">
       <th mat-header-cell *matHeaderCellDef> Amazon </th>
-      <td mat-cell *matCellDef="let element"> {{element.amazon }} </td>
+      <td mat-cell *matCellDef="let element"> {{element.amazon | number}} </td>
     </ng-container>
 
     <ng-container matColumnDef="netflix">
       <th mat-header-cell *matHeaderCellDef> Netflix </th>
-      <td mat-cell *matCellDef="let element"> {{element.netflix }} </td>
+      <td mat-cell *matCellDef="let element"> {{element.netflix | number}} </td>
     </ng-container>
   
     <tr mat-header-row *matHeaderRowDef="displayedColumnsOne"></tr>
@@ -84,7 +84,7 @@
   
     <!-- Name Column -->
     <ng-container matColumnDef="borrowingcost">
-      <th mat-header-cell *matHeaderCellDef>Cost of Borrowing</th>
+      <th mat-header-cell *matHeaderCellDef>Cost of Borrowing Per Share (in USD)</th>
       <td mat-cell *matCellDef="let element"> {{element.borrowingcost }} </td>
     </ng-container>
 

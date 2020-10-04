@@ -10,9 +10,9 @@
       </td>
     </ng-container>
     <ng-container matColumnDef="fundObligationAmount">
-      <th mat-header-cell *matHeaderCellDef> Fund Obligation </th>
+      <th mat-header-cell *matHeaderCellDef> Fund Obligation (in USD)</th>
       <td mat-cell *matCellDef="let element">
-        {{element.fundObligationAmount}}
+        {{element.fundObligationAmount | number}}
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

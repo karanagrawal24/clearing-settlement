@@ -38,3 +38,14 @@ mat-card-content {
   background-color: seagreen;
 }
 
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  height: 250px;
+  width: 250px;
+  margin-bottom: -120px;
+}

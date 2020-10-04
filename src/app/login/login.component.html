@@ -33,6 +33,8 @@
     </div>
   </div> -->
 
+  <img src = "assets/1.png" class = "center">
+
   <div class="login-page">
     <mat-card class="mat-elevation-z12">
       <mat-card-title style="text-align: center;">Log In</mat-card-title>
@@ -45,12 +47,12 @@
       <mat-card-content>
         <form action="" #item="ngForm" (ngSubmit)="onClick(item)">
           <mat-form-field>
-            <input matInput placeholder="Email" required name="email" ngModel #email="ngModel" />
-            <mat-error *ngIf="email.invalid">Email is required</mat-error>
+            <input matInput placeholder="Username" required name="email" ngModel #email="ngModel" />
+            <mat-error *ngIf="email.invalid">Username is required</mat-error>
             <mat-icon matSuffix>email</mat-icon>
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Password" type="password" name="password" ngModel
+            <input matInput placeholder="Password" required type="password" name="password" ngModel
               #password="ngModel" />
             <mat-error *ngIf="password.errors && password.errors.required">
               Password is required

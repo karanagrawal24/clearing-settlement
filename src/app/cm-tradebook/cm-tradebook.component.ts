@@ -18,7 +18,7 @@ export interface CMTrades {
   styleUrls: ['./cm-tradebook.component.css']
 })
 export class CmTradebookComponent implements OnInit {
-  displayedColumns: string[] = ['tradeID', 'cmName', 'orderType','stockName', 'price', 'quantity','tradeValue'];
+  displayedColumns: string[] = ['tradeID', 'orderType','stockName', 'price', 'quantity','tradeValue'];
   public getData = []; 
   constructor(private router: Router, private _httpService: CmTradebookService, private cookieService: CookieService ) { }
   ngOnInit(): void {
